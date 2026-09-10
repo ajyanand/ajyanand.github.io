@@ -1,11 +1,24 @@
 ---
 layout: default
 title: Ajay Anand's Blog
+description: Notes and updates from Ajay Anand.
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
+<section class="page-hero compact">
+  <div class="page-shell">
+    <p class="eyebrow">Notebook</p>
+    <h1>Notes and Updates</h1>
+    <p>Occasional writing on robotics, research, and building a life around technical curiosity.</p>
+  </div>
+</section>
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+<section class="page-shell">
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

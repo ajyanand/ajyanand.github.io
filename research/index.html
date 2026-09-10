@@ -1,0 +1,72 @@
+---
+layout: default
+title: Research
+description: Research and publications by Ajay Anand in rehabilitation robotics, human sensing, and robot-mediated therapy.
+---
+{% assign profile = site.data.profile %}
+<section class="page-hero compact">
+  <div class="page-shell">
+    <p class="eyebrow">Research</p>
+    <h1>Rehabilitation robots that can sense, adapt, and stay useful.</h1>
+    <p>My research combines human sensing, robot control, and human-robot interaction to make rehabilitation systems more measurable, accessible, and responsive to individual motor behavior.</p>
+    <div class="action-row">
+      {% for link in profile.research_links %}
+        <a class="button" href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-shell split-section">
+  <div>
+    <p class="eyebrow">Themes</p>
+    <h2>From engagement signals to robot behavior.</h2>
+  </div>
+  <div class="research-themes">
+    <article>
+      <h3>Human sensing</h3>
+      <p>Using electromyography, sonomyography, force/torque data, and motion capture to understand how people engage during therapy tasks.</p>
+    </article>
+    <article>
+      <h3>Robot-mediated rehabilitation</h3>
+      <p>Designing upper-limb systems and task interfaces that support healthy practice across six-dimensional interaction spaces.</p>
+    </article>
+    <article>
+      <h3>Social and remote care</h3>
+      <p>Studying robot-augmented telepresence and socially assistive systems for more accessible rehabilitation interactions.</p>
+    </article>
+  </div>
+</section>
+
+<section class="band">
+  <div class="page-shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Publications</p>
+        <h2>Selected works</h2>
+      </div>
+      <a class="text-link" href="https://orcid.org/0000-0002-2413-5941">ORCID record</a>
+    </div>
+    <div class="publication-list">
+      {% for pub in site.data.publications %}
+        <article class="publication-row">
+          <div class="pub-year">{{ pub.year }}</div>
+          <div>
+            <div class="pub-meta">
+              <span>{{ pub.type }}</span>
+              <span>{{ pub.short_venue }}</span>
+            </div>
+            <h3>{{ pub.title }}</h3>
+            <p class="authors">{{ pub.authors }}</p>
+            <p>{{ pub.summary }}</p>
+            <div class="inline-links">
+              {% for link in pub.links %}
+                <a href="{{ link.url }}">{{ link.label }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

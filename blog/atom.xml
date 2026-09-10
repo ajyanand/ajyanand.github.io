@@ -1,25 +1,25 @@
 ---
-layout: feed
+layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>Hank Quinlan's Blog</title>
-	<link href="http://ajyanand.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://ajyanand.github.io/blog"/>
+	<title>{{ site.title }} Notebook</title>
+	<link href="{{ '/blog/atom.xml' | absolute_url }}" rel="self"/>
+	<link href="{{ '/blog/' | absolute_url }}"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://ajyanand.github.io/blog</id>
+	<id>{{ '/blog/' | absolute_url }}</id>
 	<author>
-		<name>Ajay Anand</name>
-		<email>writetoajayanand@gmail.com</email>
+		<name>{{ site.data.profile.name }}</name>
+		<email>{{ site.data.profile.email }}</email>
 	</author>
 
 	{% for post in site.posts %}
 		<entry>
 			<title>{{ post.title }}</title>
-			<link href="http://ajyanand.github.io{{ post.url }}"/>
+			<link href="{{ post.url | absolute_url }}"/>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
-			<id>http://ajyanand.github.io{{ post.id }}</id>
+			<id>{{ post.url | absolute_url }}</id>
 			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}

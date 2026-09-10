@@ -1,30 +1,71 @@
-<!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-				<li><a href="/Links">Links</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:writetoajayanand@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/ajyanand">github.com/ajyanand</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    {% assign profile = site.data.profile %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="author" content="{{ profile.name }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:image" content="{{ profile.photo | absolute_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ profile.name }} home">
+          <span class="brand-mark">AA</span>
+          <span>
+            <strong>{{ profile.name }}</strong>
+            <small>{{ profile.title }}</small>
+          </span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          {% for item in profile.navigation %}
+            {% assign active = false %}
+            {% if item.url == "/" %}
+              {% if page.url == "/" %}
+                {% assign active = true %}
+              {% endif %}
+            {% else %}
+              {% if page.url contains item.url %}
+                {% assign active = true %}
+              {% endif %}
+            {% endif %}
+            <a class="{% if active %}active{% endif %}" href="{{ item.url | relative_url }}">{{ item.label }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <strong>{{ profile.name }}</strong>
+          <p>{{ profile.intro }}</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+          <a href="mailto:{{ profile.academic_email }}">{{ profile.academic_email }}</a>
+        </div>
+        <div>
+          <strong>Profiles</strong>
+          <a href="{{ profile.github.profile }}">GitHub</a>
+          <a href="https://www.linkedin.com/in/ajay-anand01/">LinkedIn</a>
+          <a href="https://orcid.org/0000-0002-2413-5941">ORCID</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

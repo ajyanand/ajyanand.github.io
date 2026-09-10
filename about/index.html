@@ -1,11 +1,70 @@
 ---
 layout: default
-title: About(Under Construction)
+title: About
+description: About Ajay Anand, robotics PhD student at the University of Utah and rehabilitation robotics researcher.
 ---
-    <center>
-        <h1>Ajay Anand</h1>
-        <h2>About</h3>
-        <body> This section will contain information about me </body>
-    </center>
-</body>
+{% assign profile = site.data.profile %}
+<section class="page-hero compact">
+  <div class="page-shell">
+    <p class="eyebrow">About</p>
+    <h1>{{ profile.name }}</h1>
+    <p>{{ profile.intro }}</p>
+  </div>
+</section>
 
+<section class="page-shell about-grid">
+  <div class="portrait-block">
+    <img src="{{ profile.photo | relative_url }}" alt="Ajay Anand standing outdoors">
+  </div>
+  <div class="prose">
+    {% for paragraph in profile.bio %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band">
+  <div class="page-shell two-column">
+    <div>
+      <p class="eyebrow">Research Interests</p>
+      <h2>What I work on</h2>
+      <div class="tag-list">
+        {% for interest in profile.research_interests %}
+          <span>{{ interest }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">Education</p>
+      <h2>Training</h2>
+      <div class="timeline">
+        {% for item in profile.education %}
+          <article>
+            <span>{{ item.detail }}</span>
+            <h3>{{ item.degree }}</h3>
+            <p>{{ item.institution }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page-shell">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Appointments</p>
+      <h2>Labs and roles</h2>
+    </div>
+    <a class="text-link" href="{{ '/cv/' | relative_url }}">View resume</a>
+  </div>
+  <div class="timeline wide">
+    {% for item in profile.appointments %}
+      <article>
+        <span>{{ item.dates }}</span>
+        <h3>{{ item.role }}</h3>
+        <p>{{ item.org }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

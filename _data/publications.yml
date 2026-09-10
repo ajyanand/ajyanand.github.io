@@ -1,0 +1,81 @@
+- title: "A Gradient-Descent-Based Null Space Planner for Dexterity Optimization during Upper-Limb Robot-Mediated Rehabilitation"
+  authors: "Ajay Anand, Charlie Lambert, Jono Jenkens, Carson J. Wynn, Laura A. Hallock"
+  venue: "Rocky Mountain Chapter of the American Society of Biomechanics Annual Meeting"
+  short_venue: "RMASB"
+  year: "2026"
+  type: "Abstract"
+  summary: "Null-space planning work for maintaining dexterity during upper-limb robot-mediated rehabilitation."
+  featured: true
+  links:
+    - label: "HRELab"
+      url: "https://hrelab.mech.utah.edu/publication/2026-rmasb-anand/"
+
+- title: "Characterizing Healthy & Post-Stroke Neuromotor Behavior During 6D Upper-Limb Isometric Gaming: Implications for Design of End-Effector Rehabilitation Robot Interfaces"
+  authors: "Ajay Anand, Gabriel Parra, Chad A. Berghoff, Laura A. Hallock"
+  venue: "arXiv"
+  short_venue: "arXiv"
+  year: "2026"
+  type: "Preprint"
+  summary: "Analysis of healthy and post-stroke neuromotor behavior during 6D isometric trajectory tracking with an end-effector rehabilitation robot."
+  featured: true
+  links:
+    - label: "Preprint"
+      url: "https://arxiv.org/abs/2603.10173"
+    - label: "HRELab"
+      url: "https://hrelab.mech.utah.edu/publication/2026-tnsre-anand/"
+    - label: "DOI"
+      url: "https://doi.org/10.48550/arXiv.2603.10173"
+
+- title: "An Extensible Platform for Measurement and Modification of Muscle Engagement During Upper-Limb Robot-Facilitated Rehabilitation"
+  authors: "Ajay Anand, Chad A. Berghoff, Carson J. Wynn, Evan Cole Falconer, Gabriel Parra, Jono Jenkens, Caleb J. Thomson, W. Caden Hamrick, Jacob A. George, Laura A. Hallock"
+  venue: "IEEE RAS/EMBS International Conference on Rehabilitation Robotics"
+  short_venue: "ICORR"
+  year: "2025"
+  type: "Conference paper"
+  summary: "OpenRobotRehab platform work for measuring muscle engagement during 6D upper-limb trajectory tracking tasks."
+  featured: true
+  links:
+    - label: "HRELab"
+      url: "https://hrelab.mech.utah.edu/publication/2025-icorr-anand/"
+    - label: "DOI"
+      url: "https://doi.org/10.1109/ICORR66766.2025.11062974"
+    - label: "Code"
+      url: "https://github.com/hrelab/2025-icorr-analysis"
+
+- title: "Age, Motor Function, and Cognitive Function Influence Preferences for Telerehabilitation Mediated by a Social Robot Augmented With Telepresence"
+  authors: "Michael J. Sobrepera, Anh T. Nguyen, Ajay Anand, Laura A. Prosser, Sally H. Evans, Michelle J. Johnson"
+  venue: "IEEE Transactions on Neural Systems and Rehabilitation Engineering"
+  short_venue: "IEEE TNSRE"
+  year: "2025"
+  type: "Journal article"
+  summary: "Study of social robot augmented telepresence preferences across age, motor function, and cognitive function."
+  featured: true
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1109/TNSRE.2025.3592020"
+    - label: "PubMed"
+      url: "https://pubmed.ncbi.nlm.nih.gov/40699968/"
+
+- title: "Toward a Muscle-Synergy-Based Model of Post-Stroke Pathology"
+  authors: "Gabriel Parra, Chad A. Berghoff, Ajay Anand, Laura A. Hallock"
+  venue: "IEEE RAS/EMBS International Conference on Rehabilitation Robotics"
+  short_venue: "ICORR"
+  year: "2025"
+  type: "Conference abstract"
+  summary: "Work toward granular neuromusculoskeletal models for post-stroke robot-mediated rehabilitation."
+  featured: false
+  links:
+    - label: "HRELab"
+      url: "https://hrelab.mech.utah.edu/publication/"
+
+- title: "Exploring EEG Responses During Observation of Actions Performed by Human Actor and Humanoid Robot"
+  authors: "Anh T. Nguyen, Ajay Anand, Michelle J. Johnson"
+  venue: "IEEE RAS/EMBS International Conference for Biomedical Robotics and Biomechatronics"
+  short_venue: "BioRob"
+  year: "2024"
+  type: "Conference paper"
+  summary: "EEG response study comparing observation of actions performed by a human actor and a humanoid robot."
+  featured: false
+  links:
+    - label: "DOI"
+      url: "https://doi.org/10.1109/BIOROB60516.2024.10719790"

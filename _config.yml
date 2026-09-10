@@ -1,3 +1,15 @@
+title: Ajay Anand
 name: Ajay Anand
+description: Robotics PhD student building human-centered rehabilitation robots and sensing-driven interfaces.
+url: https://www.ajyanand.com
+baseurl: ""
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title/
+timezone: America/Denver
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - media/readme.md
+  - media/resume/README.md
